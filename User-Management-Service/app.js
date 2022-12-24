@@ -10,12 +10,11 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-let conn, ch1, queue = 'session';
 // RabbitMQ Connection and Listener 
 (async () => {
-  queue = 'session';
-  conn = await amqplib.connect('amqp://localhost');
-  ch1 = await conn.createChannel();
+  const queue = 'session';
+  const conn = await amqplib.connect('amqp://localhost');
+  const ch1 = await conn.createChannel();
   await ch1.assertQueue(queue);
   app.locals.channel = ch1;
   app.locals.queue = queue;

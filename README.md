@@ -15,9 +15,16 @@ npm install
 ```
 
 ##### To Run RabbitMQ Locally Using Docker 
-Start docker the then run the command to start RabbitMQ locally.
+Start docker, then run the command to start RabbitMQ locally.
+
+Macbook or Windown Intel Machine
 ```
 docker run -d --name amqp.test -p 5672:5672 rabbitmq
+```
+
+Macbook M1 Machine
+```
+docker run -d --name amqp.test -p 5672:5672 arm64v8/rabbitmq
 ```
 
 ##### To Run Microservices
