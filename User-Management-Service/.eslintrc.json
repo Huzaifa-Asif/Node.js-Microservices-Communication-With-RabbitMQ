@@ -1,0 +1,72 @@
+{
+    "env": {
+        "node": true,
+        "commonjs": true,
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly",
+        "CONSTANTS": "readonly",
+        "logger": "readonly",
+        "sleep": "readonly",
+        "locale": "readonly",
+        "errorHandler": "readonly",
+        "nowToSqlDateStr": "readonly",
+        "toSqlDateStr": "readonly",
+        "get_api_server_private_address": "readonly",
+        "resolve_internal_api_url": "readonly",
+        "timestamp": "readonly",
+        "module": "readonly",
+        "err": "readonly",
+        "err_code": "readonly",
+        "application": "readonly",
+        "APM": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "semi": ["error", "always"],
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "quote-props": ["error", "as-needed"],
+        "no-trailing-spaces": "error",
+        "no-multiple-empty-lines": "error",
+        "eol-last": ["error", "always"],
+        "prefer-destructuring": ["error", {
+            "array": true,
+            "object": true
+        }],
+        "no-var": "error",
+        "no-const-assign": "error",
+        "object-shorthand": "error",
+        "prefer-const": "error",
+        "prefer-template": "error",
+        "space-before-blocks": "error",
+        "sort-imports": "error",
+        "keyword-spacing": ["error", {
+            "before": true,
+            "after": true,
+            "overrides": {
+              "return": { "after": true },
+              "throw": { "after": true },
+              "case": { "after": true }
+            }
+        }],
+        "object-curly-spacing": ["error", "always"],
+        "template-curly-spacing": ["error", "never"],
+        "no-console": 1,
+        "no-fallthrough": "error",
+        "comma-dangle": ["error", "never"],
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "eqeqeq": "error",
+        "space-infix-ops": "error"
+    }
+}
